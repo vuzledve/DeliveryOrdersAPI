@@ -17,7 +17,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IDeliveryOrdersRepository, EFDeliveryOrdersRepository>();
 
 //подключаем контекст БД
-builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));
+builder.Services.AddDbContext<AppDbContext>(x =>
+x.UseSqlServer(Config.ConnectionString));
+
+
 
 var app = builder.Build();
 

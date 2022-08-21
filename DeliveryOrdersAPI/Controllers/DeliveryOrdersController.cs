@@ -87,10 +87,10 @@ namespace DeliveryOrdersAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<DeliveryOrder>> PostDeliveryOrder(DeliveryOrder deliveryOrder)
         {
-          if (_context.DeliveryOrders == null)
-          {
-              return Problem("Entity set 'AppDbContext.DeliveryOrders'  is null.");
-          }
+            if (_context.DeliveryOrders == null)
+            {
+                return Problem("Entity set 'AppDbContext.DeliveryOrders'  is null.");
+            }
             deliveryOrder.OrderNum = _context.DeliveryOrders.Count() + 1;
             _context.DeliveryOrders.Add(deliveryOrder);
             await _context.SaveChangesAsync();
