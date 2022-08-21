@@ -10,6 +10,10 @@ namespace DeliveryOrdersAPI.Models
         public Guid Id { get; set; } //номер заказа, он же его id
 
         [Required]
+        [Display(Name = "Номер заказа")]
+        public long OrderNum { get; set; } = DateTime.Now.Ticks;
+
+        [Required]
         [Display(Name = "Город отправителя")]
         public string SenderCity { get; set; }
 

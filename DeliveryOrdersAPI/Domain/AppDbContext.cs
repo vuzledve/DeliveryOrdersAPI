@@ -16,6 +16,7 @@ namespace DeliveryOrdersAPI.Domain
             modelBuilder.Entity<DeliveryOrder>().HasData(new DeliveryOrder
             {
                 Id = new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"),
+                OrderNum = 1,
                 SenderCity = "Санкт-Петербург",
                 SenderAddress = "Улица им.Пушкина 36, кв 5",
                 RecipientCity = "Москва",
@@ -27,6 +28,7 @@ namespace DeliveryOrdersAPI.Domain
             modelBuilder.Entity<DeliveryOrder>().HasData(new DeliveryOrder
             {
                 Id = new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"),
+                OrderNum = 2,
                 SenderCity = "Тольятти",
                 SenderAddress = "Улица Баныкина 31, кв 65",
                 RecipientCity = "Омск",
@@ -38,6 +40,7 @@ namespace DeliveryOrdersAPI.Domain
             modelBuilder.Entity<DeliveryOrder>().HasData(new DeliveryOrder
             {
                 Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"),
+                OrderNum = 3,
                 SenderCity = "Самара",
                 SenderAddress = "Улица Куйбышева 5, кв 51",
                 RecipientCity = "Нижний Новгород",

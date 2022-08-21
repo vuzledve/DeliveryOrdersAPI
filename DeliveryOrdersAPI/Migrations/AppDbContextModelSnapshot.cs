@@ -34,6 +34,9 @@ namespace DeliveryOrdersAPI.Migrations
                     b.Property<DateTime>("DatePickup")
                         .HasColumnType("datetime2");
 
+                    b.Property<long>("OrderNum")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("RecipientAddress")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -60,6 +63,7 @@ namespace DeliveryOrdersAPI.Migrations
                             Id = new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"),
                             CargoWeight = 10.5m,
                             DatePickup = new DateTime(2022, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderNum = 1L,
                             RecipientAddress = "Улица им.Колотушкина 56, кв 36",
                             RecipientCity = "Москва",
                             SenderAddress = "Улица им.Пушкина 36, кв 5",
@@ -70,6 +74,7 @@ namespace DeliveryOrdersAPI.Migrations
                             Id = new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"),
                             CargoWeight = 3.5m,
                             DatePickup = new DateTime(2022, 9, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderNum = 2L,
                             RecipientAddress = "Улица Ленина 65, кв 23",
                             RecipientCity = "Омск",
                             SenderAddress = "Улица Баныкина 31, кв 65",
@@ -80,6 +85,7 @@ namespace DeliveryOrdersAPI.Migrations
                             Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"),
                             CargoWeight = 5.3m,
                             DatePickup = new DateTime(2022, 11, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderNum = 3L,
                             RecipientAddress = "Улица Рождественская 15, кв 7",
                             RecipientCity = "Нижний Новгород",
                             SenderAddress = "Улица Куйбышева 5, кв 51",

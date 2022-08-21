@@ -15,7 +15,6 @@ builder.Services.AddSwaggerGen();
 
 //подключаем нужный функционал приложения в качестве сервисов
 builder.Services.AddTransient<IDeliveryOrdersRepository, EFDeliveryOrdersRepository>();
-builder.Services.AddTransient<DataManager>();
 
 //подключаем контекст БД
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));

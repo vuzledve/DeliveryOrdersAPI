@@ -91,7 +91,7 @@ namespace DeliveryOrdersAPI.Controllers
           {
               return Problem("Entity set 'AppDbContext.DeliveryOrders'  is null.");
           }
-            
+            deliveryOrder.OrderNum = _context.DeliveryOrders.Count() + 1;
             _context.DeliveryOrders.Add(deliveryOrder);
             await _context.SaveChangesAsync();
             return Ok(deliveryOrder);
